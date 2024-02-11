@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.databinding.ActivityProfileBinding
 
 class ProfileActivity : AppCompatActivity() {
@@ -24,13 +23,14 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         binding.editButton.setOnClickListener{
-            if(binding.nameEditText.text.toString() !== ""){
+
+            if(binding.nameEditText.text.toString().isNotEmpty()){
                 val intent = Intent()
                 intent.putExtra("name", binding.nameEditText.text.toString())
                 setResult(RESULT_OK, intent)
                 finish()
             }else{
-                Toast.makeText(this, "Nwe name is empty", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Name name is empty", Toast.LENGTH_LONG).show()
             }
         }
     }

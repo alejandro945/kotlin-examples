@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             var password = binding.editTextTextPassword.text.toString()
             var text = "${email} : ${password}"
             Toast.makeText(this, text, Toast.LENGTH_LONG).show()
-            val intent: Intent = Intent(this, CiscoActivity::class.java)
+            val intent: Intent = Intent(this, ProfileActivity::class.java)
             intent.putExtra("email", email)
             launcher.launch(intent)
         }
