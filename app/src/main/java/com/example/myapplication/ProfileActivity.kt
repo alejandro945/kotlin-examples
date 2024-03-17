@@ -33,5 +33,6 @@ class ProfileActivity : AppCompatActivity() {
                 Toast.makeText(this, "Name name is empty", Toast.LENGTH_LONG).show()
             }
         }
+
     }
 }
